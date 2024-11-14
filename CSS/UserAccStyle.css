@@ -1,0 +1,138 @@
+/*Main content css Styles*/
+
+.wrapper{
+    margin-top: 50px;
+    display: flex;
+    background-color: yellow;
+    width: 75%;
+    background-color: rgba(255, 255, 255, 0.699);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
+    
+}
+
+.wrapper .useraccount{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 40%;
+    height: 50%;
+    margin-left: 100px;
+    background-color: #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.699);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
+}
+
+.wrapper .useraccount form{
+    border: 2px solid black;
+    padding: 10px;
+}
+
+.wrapper .useraccount .content .account-info {
+    padding: 20px;
+}
+
+.wrapper .useraccount .content .account-info h2 {
+    margin-bottom: 15px;
+}
+
+.wrapper .useraccount .content .account-info form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.wrapper .useraccount .content .account-info label {
+    font-weight: bold;
+    text-align: justify;
+}
+
+.wrapper .useraccount .content .account-info input {
+    padding: 8px;
+    background-color: rgba(9, 4, 4, 0.118);
+    border: 1px solid #7b95b4e3;
+    border-radius: 5px;
+    width: 300px;
+}
+
+.wrapper .useraccount .content .account-info input:hover{
+    background-color: #ffffff;
+}
+
+
+button {
+    margin-right: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+}
+
+button:nth-child(2) {
+    background-color: #FF0000;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+
+/*New CSS for account information Div*/
+.account-container {
+    width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2, h3 {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.update-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.delete-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.8;
+}

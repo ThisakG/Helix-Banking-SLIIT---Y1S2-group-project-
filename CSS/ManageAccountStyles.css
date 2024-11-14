@@ -1,0 +1,149 @@
+/*Manage account page CSS / CRUD CSS part-------------------------------------------------------------------*/
+
+
+/* Style for the main section */
+main {
+    padding: 20px;
+}
+
+/* Style for the table */
+.productData table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.productData th, .productData td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.productData th {
+    background-color: #666;
+    color: white;
+    text-transform: uppercase;
+}
+
+.productData td {
+    background-color: #fff;
+}
+
+.productData tr:nth-child(even) {
+    background-color: #f2f2f2;
+    /*zebra striping effect where alternative rows have different colors to make readability easier*/
+}
+
+/* Hover effect for table rows */
+.productData tr:hover {
+    background-color: #ddd;
+}
+
+/* Style for edit and delete links */
+.productData a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.productData a:hover {
+    opacity: 0.8;
+    /*Blurs the content upon mouse hover*/
+}
+
+/* Edit button */
+.productData a[href*="editAccount"] {
+    background-color: #ff9800; /* Orange */
+}
+
+.productData a[href*="editLoanPage"] {
+    background-color: #ff9800; /* Orange */
+}
+
+.productData a[href*="editAccountEmp"] {
+    background-color: #ff9800; /* Orange */
+}
+
+.productData a[href*="editFDPage"] {
+    background-color: #ff9800; /* Orange */
+}
+
+
+/* Delete button */
+.productData a[href*="deleteAccount"] { 
+    background-color: #f44336; /* Red */
+}
+
+.productData a[href*="deleteLoanScheme"] { 
+    background-color: #f44336; /* Red */
+}
+
+.productData a[href*="deleteAccountEmp"] { 
+    background-color: #f44336; /* Red */
+}
+
+.productData a[href*="deleteFDScheme"]{
+    background-color: #f44336; /* Red */
+}
+
+
+/*CSS for the add new account form page------------------------------------------------*/
+/* Style for the main section */
+main {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Style for the form */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #666;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Style for the labels */
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #eee;
+}
+
+/* Style for the input fields */
+form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+
+/* Style for the submit button */
+.styled-button {
+    display: inline-block;
+    background-color: #666 ;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.styled-button:hover {
+    background-color: #74b9ff;
+    color: black;
+    transform: scale(1.08); /* Enlarge by 08% on hover */
+}
+
+
+
+

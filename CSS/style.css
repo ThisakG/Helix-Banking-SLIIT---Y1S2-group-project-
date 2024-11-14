@@ -1,0 +1,125 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    margin: 0;
+}
+
+.content {
+    width: 30%;
+    margin: 50px auto;
+    background-color: #f0f0f0;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.cont-1 {
+    width: 30%;
+    margin: 50px auto;
+    background-color: #f0f0f0;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.content-2 {
+    width: 50%;
+    margin: 50px auto;
+    background-color: #f0f0f0;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.contentfund {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 80%;
+    height: 100%;
+    margin: 50px auto;
+    background-color: #f0f0f0;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+body {
+    padding: auto;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.loan-list {
+    margin-bottom: 20px;
+}
+
+.loan-item {
+    background-color: #fff;
+    padding: 20px;
+    border-left: 8px solid #4CAF50;
+    /* Accent color */
+    border-radius: 8px;
+    font-size: 18px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table,
+th,
+td {
+    border: 1px solid #ddd;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    padding: 8px 15px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* Nested dropdown (Fund Transfers) */
+
+.sub-dropdowns1 {
+    position: relative;
+}
+
+.sub-dropdowns1-content {
+    display: none;
+    position: absolute;
+    left: 160px;
+    /* Adjust the position as needed */
+    top: 0;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    min-width: 160px;
+}
+
+.sub-dropdowns1:hover .sub-dropdowns1-content {
+    display: block;
+}

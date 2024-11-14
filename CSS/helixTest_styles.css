@@ -1,0 +1,259 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    background-image: url(../Images/pexels-anniroenkae-15578085.jpg);
+    
+}
+
+header {
+    display: flex;
+    background-color: #1e40af;
+    padding: 20px;
+    justify-content: space-between; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+}
+
+header .logo img {
+    width: 1500px;
+    height: 120px;
+    flex: 1;
+}
+
+header h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+    color: white;
+    text-align: center; /* Centers text within h1 */
+    flex: 2; /* Ensures h1 takes up the available space evenly */
+}
+
+header nav {
+    display: flex;
+    gap: 10px;
+    flex: 1;
+    justify-content: flex-end; 
+}
+
+nav button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.login-btn {
+    background-color: #74b9ff; 
+    width: 140px;
+    height: 50px;
+    font-weight: bold;
+}
+
+.register-btn {
+    background-color: #74b9ff; 
+    width: 140px;
+    height: 50px;
+    font-weight: bold;
+}
+
+.login-btn, .register-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.login-btn:hover {
+    transform: scale(1.08); /* Enlarge by 08% on hover */
+    background-color: #ff7979; 
+}
+
+
+.register-btn:hover {
+    transform: scale(1.08); /* Enlarge by 08% on hover */
+    background-color: #ff7979; 
+}
+
+/* Login Form Styles */
+.login-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    
+}
+
+.login-form {
+    background-color: transparent; /*white???*/
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+    backdrop-filter: blur(30px);
+}
+
+.login-form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.login-form label {
+    font-size: 14px;
+    text-align: left;
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+
+}
+
+.remember-forgot label {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.remember-forgot label input[type="checkbox"] {
+    margin-right: 5px;
+    vertical-align: middle;
+    transform: translateY(4px);
+}
+
+.remember-forgot a {
+    text-decoration: none;
+    font-size: 0.9rem;
+    color: #333;
+    font-weight: bold;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+.login-form .login-submit {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 0;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+    
+}
+
+.login-form .login-submit:hover{
+    /*background-color: #999;*/
+    transition: transform 0.3s ease;
+    transform: scale(1.08); /* Enlarge by 08% on hover */
+    background-color: #74b9ff; 
+    color:white;
+}
+
+/* Additional Links Styling */
+.additional-links {
+    margin-top: 20px;
+    text-align: center;
+    
+}
+
+.additional-links p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+
+.additional-links a:not(:last-child) {
+    padding-right: 85px; 
+    /*  adding padding (space) on the right side of each link except the last one */
+  }
+
+.additional-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.additional-links a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Styles */
+footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #34495e; /* Dark blue-gray */
+    color: white; /* White text in footer */
+    padding: 40px;
+    margin-top: 40px;
+    align-items: center;
+}
+
+.footer-links {
+    display: flex;
+    gap: 15px;
+    color: white;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+    color: #60a5fa;
+}
+
+
+.social-media {
+    display: flex;
+    align-items: center;
+}
+
+.social-media span {
+    margin-right: 10px;
+}
+
+.social-media a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.social-media a:hover{
+    text-decoration: none;
+    color: #60a5fa;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.copyright{
+    font-size: 12px;
+    transform: translateX(30px);
+    color: white;
+}
+
+

@@ -1,0 +1,244 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+    background-color: #ffffff;
+    color: #333;
+   background-image: url(../Images/pexels-anniroenkae-15578085.jpg);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1e40af;
+    padding: 10px 20px;
+}
+
+.logo-box {
+    width: 50px;
+    height: 50px;
+    background-color: #3b82f6;
+    text-align: center;
+    line-height: 50px;
+    font-weight: bold;
+}
+
+h1 {
+    margin: 0;
+    color: white;
+    font-size: 24px;
+    transform: translateX(25px);
+    text-align: center;
+}
+
+
+
+/* User Section */
+.user {
+    display: flex;
+    align-items: center;
+}
+
+.user-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #60a5fa;
+    /* Light Sky Blue user image */
+    margin-right: 10px;
+    /* Space between the image and the text */
+    overflow: hidden;
+}
+
+.user-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ensures the image covers the entire circular area */
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    /* Stacks Username and Log out vertically */
+    color: white;
+}
+
+.logout {
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+    /* Adjust font size if needed */
+    text-decoration: none;
+}
+
+.logout:hover {
+    text-decoration: underline;
+}
+
+
+/* Navigation */
+nav {
+    background-color: #e5e7eb;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #1e40af;
+    font-weight: bold;
+    padding: 10px 20px;
+    /* Adjust the padding for size */
+    border-radius: 50px;
+    /* This creates the oval shape */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    /* Smooth transition */
+}
+
+nav ul li a:hover,
+.dropdown-content a:hover {
+    text-decoration: none;
+    background-color: #ff7979;
+    /* Coral red on hover */
+    color: white;
+}
+
+
+nav ul li a.active {
+    background-color: #74b9ff;
+    /* Sky blue for active link */
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+
+/*Dropdown shit*/
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ff7979;
+    /* Coral red on hover */
+    color: white;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #ff7979;
+    /* Coral red on hover */
+    color: white;
+}
+
+
+/*Main content*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('./Images/bgImage.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #34495e;
+    /* Dark blue-gray */
+    color: white;
+    /* White text in footer */
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    margin-top: 120px;
+    align-items: center;
+}
+
+.footer-links {
+    display: flex;
+    gap: 15px;
+    color: white;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+    color: #60a5fa;
+}
+
+.social-media {
+    display: flex;
+    align-items: center;
+}
+
+.social-media span {
+    margin-right: 10px;
+}
+
+.social-media a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.social-media a:hover {
+    text-decoration: none;
+    color: #60a5fa;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.copyright {
+    font-size: 12px;
+    transform: translateX(25px);
+    color: white;
+}
