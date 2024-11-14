@@ -1,0 +1,3 @@
+function showFAQs() {
+    alert("Here are the FAQs!");
+}
