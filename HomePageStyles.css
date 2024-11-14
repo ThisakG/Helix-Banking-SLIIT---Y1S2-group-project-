@@ -1,0 +1,418 @@
+/* Global Styles ----------------------------------------------------------------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+    background-color: #ffffff; /* White background */
+    color: #333; /* Neutral text color */
+    background-image: url(../Images/pexels-anniroenkae-15578085.jpg);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1e40af;
+    padding: 10px 20px;
+}
+
+.logo-box {
+    width: 50px;
+    height: 50px;
+    background-color: #3b82f6;
+    text-align: center;
+    line-height: 50px;
+    font-weight: bold;
+}
+
+h1 {
+    margin: 0;
+    color: white;
+    font-size: 24px;
+    transform: translateX(25px);
+    text-align: center;
+
+}
+
+
+
+/* User Section -------------------------------------------------------------------------------------------*/
+.user {
+    display: flex;
+    align-items: center;
+}
+
+.user-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #60a5fa; 
+    margin-right: 10px; /* Space between the image and the text */
+    overflow: hidden;
+}
+
+.logo img{
+    width: 150px;
+    height: 150px;
+    
+}
+.user-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the entire circular area */
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column; /* Stacks Username and Log out vertically */
+    color: white;
+}
+
+.logout {
+    text-decoration: none;
+    color: white;
+    font-size: 12px; 
+    text-decoration: none;
+}
+
+.logout:hover {
+    text-decoration: underline;
+}
+
+
+/* Navigation --------------------------------------------------------------------------------------*/
+nav {
+    background-color: #e5e7eb;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #1e40af;
+    font-weight: bold;
+    padding: 10px 20px; /* Adjust the padding for size */
+    border-radius: 50px; /* This creates the oval shape */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+nav ul li a:hover, .dropdown-content a:hover {
+    text-decoration: none; 
+    background-color: #ff7979; /* Coral red on hover */
+    color: white;
+}
+
+
+nav ul li a.active {
+    background-color: #74b9ff; 
+    padding: 10px 20px;
+    border-radius: 50px; 
+}
+
+/*Dropdown content------------------------------------------------------------------------------------------*/
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ff7979; /* Coral red on hover */
+    color: white; 
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #ff7979; /* Coral red on hover */
+    color: white;
+}
+
+
+/* Main content */
+main {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.hero {
+    margin-bottom: 40px;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    color: #1e40af;
+}
+
+.hero p {
+    font-size: 1.2em;
+    color: #6b7280;
+}
+
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    grid-gap: 20px; /* Space between the feature boxes */
+    padding: 20px;
+    /*margin-bottom: 10px; Add space between features and footer */
+    grid-row-gap: 50px; /* Vertical space between rows */
+}
+
+.feature-box {
+    background-color: #f1f1f1;
+    padding: 30px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.feature-box h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #34495e; /* Dark blue-gray */
+}
+
+.feature-box p {
+    font-size: 1em;
+    color: #666;
+}
+
+.feature-box:hover {
+    background-color: #60a5fa;
+    transition: transform 0.3s ease;
+    transform: scale(1.08); /* Enlarge by 08% on hover */
+}
+
+.feature-box:hover p {
+    color: white; /* Change the paragraph text color to white on hover */
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.styled-button {
+    display: inline-block;
+    background-color: #4d4d4d; /* Similar dark color as the login button */
+    color: white;
+    border: none;
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px 20px; /* Padding for the button */
+    font-size: 16px;
+    width: 220px; /* Fixed width for all buttons */
+    height: 45px; /* Fixed height for all buttons */
+    margin: 10px 0; /* Space between the buttons */
+    cursor: pointer;
+    transition: background-color 0.4s ease; /* Smooth hover transition */
+}
+
+.styled-button:hover {
+    background-color: #333; 
+}
+
+.styled-button a{
+    color:#eee;
+    text-decoration: none;
+}
+
+.styled-button:active {
+    background-color: #222; 
+    transform: scale(0.98); /* Slight button press effect */
+}
+
+.update-box {
+    background-color: #f9f9f9; 
+    border: 1px solid #ddd; 
+    border-radius: 8px; 
+    padding: 15px; 
+    margin: 10px 0; /* Space between the updates */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for elevation */
+}
+
+.update-box p {
+    font-size: 16px; 
+    color: #333; 
+    margin: 0; 
+}
+
+.system-updates h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+/*Back to top button CSS-------------------------------------------------------------------------------------*/
+#backToTopBtn{
+    display:none;
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    padding:10px 20px;
+    background-color:#1e40af;
+    color:white;
+    border:none;
+    border-radius:50px;
+    cursor:pointer;
+}
+
+/*Manage account page CSS / CRUD CSS part-------------------------------------------------------------------*/
+/* Style for the main section 
+main {
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+/* Style for the table 
+.productData table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.productData th, .productData td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.productData th {
+    background-color: #4CAF50;
+    color: white;
+    text-transform: uppercase;
+}
+
+.productData td {
+    background-color: #fff;
+}
+
+.productData tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Hover effect for table rows 
+.productData tr:hover {
+    background-color: #ddd;
+}
+
+/* Style for edit and delete links 
+.productData a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.productData a:hover {
+    opacity: 0.8;
+}
+
+/* Edit button 
+.productData a[href*="editAccount"] {
+    background-color: #ff9800; /* Orange 
+}
+
+/* Delete button 
+.productData a[href*="deleteAccount.php"] { 
+    background-color: #f44336; /* Red 
+}*/
+
+
+
+/* Footer Styles--------------------------------------------------------------------------------------------- */
+footer {
+    background-color: #34495e; /* Dark blue-gray */
+    color: white; /* White text in footer */
+    display: flex;
+    justify-content: space-between;
+    padding: 60px;
+    margin-top: 120px;
+    align-items: center;
+}
+
+.footer-links {
+    display: flex;
+    gap: 15px;
+    color: white;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+    color: #60a5fa;
+}
+
+.social-media {
+    display: flex;
+    align-items: center;
+}
+
+.social-media span {
+    margin-right: 10px;
+}
+
+.social-media a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+.social-media a:hover{
+    text-decoration: none;
+    color: #60a5fa;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.copyright{
+    font-size: 12px;
+    transform: translateX(25px);
+    color: white;
+}
+
+
+
+
