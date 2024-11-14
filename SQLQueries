@@ -1,0 +1,306 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Oct 07, 2024 at 10:50 AM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.0.30
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `helix_banking`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `account_information`
+--
+
+CREATE TABLE `account_information` (
+  `Account_No` int(10) NOT NULL,
+  `Account_Type` varchar(100) NOT NULL,
+  `Open_Date` date NOT NULL,
+  `Account_Balance` decimal(10,2) NOT NULL,
+  `Account_HolderName` text NOT NULL,
+  `Account_HolderMail` varchar(100) NOT NULL,
+  `Account_HolderNumber` int(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `account_information`
+--
+
+INSERT INTO `account_information` (`Account_No`, `Account_Type`, `Open_Date`, `Account_Balance`, `Account_HolderName`, `Account_HolderMail`, `Account_HolderNumber`) VALUES
+(52001, 'Savings Account             ', '2001-09-11', 510000.00, 'Lasal Manith Ranaweera                                ', 'lasal@gmail.com                                ', 778934650),
+(52023, 'Savings Account', '2005-05-01', 1300000.25, 'Nisal Lawanya Dushmantha ', 'lawa@gmail.com', 712033567),
+(52067, 'Business Account', '2015-07-31', 65000.45, 'Nirasha Ganegoda', 'nirasha@gmail.com', 769595345),
+(52090, 'Current Account', '2014-02-02', 75000.00, 'Ravindu Kaveesha Athuraliya', 'ravindu@gmail.com', 752301422);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin_information`
+--
+
+CREATE TABLE `admin_information` (
+  `Admin_ID` varchar(20) NOT NULL,
+  `Name` text NOT NULL,
+  `DOB` date NOT NULL,
+  `Address` text NOT NULL,
+  `Admin_email` varchar(20) NOT NULL,
+  `username` text NOT NULL,
+  `password` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `admin_information`
+--
+
+INSERT INTO `admin_information` (`Admin_ID`, `Name`, `DOB`, `Address`, `Admin_email`, `username`, `password`) VALUES
+('AD001', 'Adithya', '2000-09-09', 'SLIIT', 'A@gmail,com', 'Adithya', 'a1234'),
+('AD061', 'Vehan Nimasara', '2001-09-11', '351/C Negombo road,Halawatha', 'vehan@gmail.com', 'Vehan', 'V@123'),
+('AD230', 'Thisaru Nisal Shashimantha', '1999-06-07', '43/A Methsiri Mawatha,Malabe', 'thisaru@gmal.com', 'Thisaru', 'T@123'),
+('AD005', 'Nethmi Lochana', '2004-07-03', '88/38 Sesath Niwasa,Ihala Bomiriya,Kaduwela', 'nethmi@gmail.com', 'Nethmi', 'N@123');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `contactus`
+--
+
+CREATE TABLE `contactus` (
+  `id` int(11) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `email` varchar(200) NOT NULL,
+  `subject` varchar(150) NOT NULL,
+  `message` text NOT NULL,
+  `phone` varchar(20) DEFAULT NULL,
+  `created_at` datetime NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `contactus`
+--
+
+INSERT INTO `contactus` (`id`, `name`, `email`, `subject`, `message`, `phone`, `created_at`) VALUES
+(1, 'John Doe', 'john.doe@example.com', 'Product recommendations', 'I would like more information about your product.', '123-456-7890', '2024-10-04 14:30:26'),
+(2, 'Jane Smith', 'jane.smith@example.com', 'Support Request', 'I need help with my account login.', '987-654-3210', '2024-10-04 14:30:26'),
+(5, 'lasal', 'lasal@gmail.com', 'hi', 'hi hi', '1191191191', '2024-10-07 09:33:59');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `customer`
+--
+
+CREATE TABLE `customer` (
+  `Account_Type` varchar(20) NOT NULL,
+  `Account_Number` int(20) NOT NULL,
+  `Branch` varchar(20) NOT NULL,
+  `Name` varchar(500) NOT NULL,
+  `Address` varchar(500) NOT NULL,
+  `NIC/Passport Number` int(20) NOT NULL,
+  `Contact_Number` int(10) NOT NULL,
+  `Email` varchar(20) NOT NULL,
+  `Username` varchar(20) NOT NULL,
+  `confirmpassword` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `customer`
+--
+
+INSERT INTO `customer` (`Account_Type`, `Account_Number`, `Branch`, `Name`, `Address`, `NIC/Passport Number`, `Contact_Number`, `Email`, `Username`, `confirmpassword`) VALUES
+('Savings Account', 52001, 'Colombo 7', 'Lasal Manith Ranaweera', '47/C Hyd Park, Colombo', 20034567, 772322456, 'lasal@gmail.com', 'Lasal', 'L@123'),
+('Savings Account', 52023, 'Malabe', 'Nisal Lawanya Dushmantha', '89/B Pittugala Road,Pittugala', 19995678, 784544210, 'nisal@gmail.com', 'Nisal', 'N@123'),
+('Business Account', 52067, 'Malabe', 'Nirasha Ganegoda', '255/V Kandy road, Malabe', 19786743, 712233445, 'nirasha@gmail.com', 'Nirasha', 'N@123'),
+('Current Account', 52090, 'Kandy', 'Ravindu Kaveesha Athuraliya', '550/67 Jaya Mawatha,Kundasale', 20014466, 789600441, 'ravindu@gmail.com', 'Ravindu', 'R@123');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `fd_information`
+--
+
+CREATE TABLE `fd_information` (
+  `FD_Scheme_No` int(10) NOT NULL,
+  `Description` varchar(500) NOT NULL,
+  `FD_Amount` decimal(65,2) NOT NULL,
+  `Interest_Rates` decimal(5,2) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `fd_information`
+--
+
+INSERT INTO `fd_information` (`FD_Scheme_No`, `Description`, `FD_Amount`, `Interest_Rates`) VALUES
+(1, 'Premium Savings', 500000.00, 5.25),
+(2, 'Senior Citizen Plan', 300000.00, 6.00),
+(3, 'Monthly Income Plan', 150000.00, 4.75),
+(4, 'Child Education Plan                                ', 240000.00, 5.00);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `loan_schemes`
+--
+
+CREATE TABLE `loan_schemes` (
+  `loanSch_No` int(10) NOT NULL,
+  `Description` varchar(500) NOT NULL,
+  `Loan_Amount` decimal(20,2) NOT NULL,
+  `Installement_Rates` decimal(5,2) NOT NULL,
+  `Loan_Status` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `loan_schemes`
+--
+
+INSERT INTO `loan_schemes` (`loanSch_No`, `Description`, `Loan_Amount`, `Installement_Rates`, `Loan_Status`) VALUES
+(1, 'Vehicle loans', 500000.00, 5.50, 'Approved'),
+(2, 'Business loan', 800000.00, 6.00, 'Pending'),
+(3, 'Personal Loan', 125000.00, 5.20, 'Pending');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `manage_employee`
+--
+
+CREATE TABLE `manage_employee` (
+  `Employee_ID` varchar(100) NOT NULL,
+  `Employee_name` varchar(20) NOT NULL,
+  `Date_of_birth` date NOT NULL,
+  `Address` varchar(20) NOT NULL,
+  `Employee_Email` varchar(20) NOT NULL,
+  `username` text NOT NULL,
+  `password` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `manage_employee`
+--
+
+INSERT INTO `manage_employee` (`Employee_ID`, `Employee_name`, `Date_of_birth`, `Address`, `Employee_Email`, `username`, `password`) VALUES
+('EMP001', 'Amasha Heshini', '2005-10-24', '22/F Kandy road,Mala', 'amasha@gmail.com', 'Amasha', 'A@123'),
+('EMP022', 'Anura Kumara', '1966-05-09', '66/C Hokandara,Malab', 'anura@gmail.com', 'Anura', 'AN@123'),
+('EMP045', 'Ashen Themira', '1999-03-08', '78/9 Ranala,Hanwella', 'ashen@gmail.com', 'Ashen', 'AS@123'),
+('EMP090', 'Sajith Premadasa', '1988-04-19', '34/78 Bovila road,Ka', 'sajith@gmail.com', 'Sajith', 'S@123');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `transfers`
+--
+
+CREATE TABLE `transfers` (
+  `id` int(11) NOT NULL,
+  `amount` decimal(10,2) NOT NULL,
+  `account_name` varchar(100) NOT NULL,
+  `bank` varchar(100) NOT NULL,
+  `account_number` varchar(50) NOT NULL,
+  `description` text DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `transfers`
+--
+
+INSERT INTO `transfers` (`id`, `amount`, `account_name`, `bank`, `account_number`, `description`, `created_at`) VALUES
+(1, 100.00, 't', 'Bank 1', '100100', 'test', '2024-10-04 21:26:17'),
+(2, 2000.00, 'd', 'Bank 1', '1234', 'test', '2024-10-05 05:38:07'),
+(3, 3000.00, 'f', 'Bank 1', '1220', 'test2', '2024-10-05 07:31:13'),
+(4, 1000.00, 'savings', 'Bank 1', '52001', 'madu', '2024-10-07 04:02:11'),
+(5, 1000.00, 'savings', 'Bank 1', '52001', 'madu', '2024-10-07 04:02:21');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `account_information`
+--
+ALTER TABLE `account_information`
+  ADD PRIMARY KEY (`Account_No`);
+
+--
+-- Indexes for table `contactus`
+--
+ALTER TABLE `contactus`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `customer`
+--
+ALTER TABLE `customer`
+  ADD PRIMARY KEY (`Account_Number`);
+
+--
+-- Indexes for table `fd_information`
+--
+ALTER TABLE `fd_information`
+  ADD PRIMARY KEY (`FD_Scheme_No`);
+
+--
+-- Indexes for table `loan_schemes`
+--
+ALTER TABLE `loan_schemes`
+  ADD PRIMARY KEY (`loanSch_No`);
+
+--
+-- Indexes for table `manage_employee`
+--
+ALTER TABLE `manage_employee`
+  ADD PRIMARY KEY (`Employee_ID`);
+
+--
+-- Indexes for table `transfers`
+--
+ALTER TABLE `transfers`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `account_information`
+--
+ALTER TABLE `account_information`
+  MODIFY `Account_No` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=520068;
+
+--
+-- AUTO_INCREMENT for table `contactus`
+--
+ALTER TABLE `contactus`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `loan_schemes`
+--
+ALTER TABLE `loan_schemes`
+  MODIFY `loanSch_No` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `transfers`
+--
+ALTER TABLE `transfers`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
