@@ -75,7 +75,21 @@ Note: Location must be C:\xampp\htdocs folder.
 
 </p>
 <br>
-<p><h3>Login Credentials:</h3></p>
+<p><h3>Login Credentials:</h3><br>
+
+    - Customer Username 02: Vinuji 
+    - Customer Password 03: V@123
+
+    - Customer Username 01: Nisal <br>
+    - Customer Password 02: N@123
+
+    - Employee Username: Anura <br>
+    - Employee password: AN@123
+
+    - Administrator Username: Adithya <br>
+    - Administrator Password: a1234
+    
+</p>
 <br>
 <p>
 <h3>Contributions and Thanks:</h3>
