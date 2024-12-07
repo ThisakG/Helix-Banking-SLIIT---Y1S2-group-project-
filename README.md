@@ -71,7 +71,7 @@ Note: Location must be C:\xampp\htdocs folder.
 6.After clicking database click import and select the file "SQLQueries.sql"
 
 7.Open the following link on any browser 
-"http://localhost/Helix Banking"
+"[http://localhost/HelixBanking](http://localhost/Helix%20Banking/src/)"
 
 </p>
 <br>
