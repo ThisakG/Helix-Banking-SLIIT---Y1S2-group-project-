@@ -1,6 +1,6 @@
 # Helix-Banking
 <p>
-This GitHub Project presents the online banking platform 'Helix Banking' that was created as the group project for the Year 1 Semester 2 Internet and Web Technologies Module at SLIIT. 
+This GitHub Repository presents the online banking platform 'Helix Banking' that was created as the group project for the Year 1 Semester 2 Internet and Web Technologies Module at SLIIT. 
 </p>
 
 <p>
