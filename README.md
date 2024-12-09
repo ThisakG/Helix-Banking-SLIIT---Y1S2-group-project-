@@ -96,6 +96,6 @@ Note: Location must be C:\xampp\htdocs folder.
 Feel free to raise issues, provide feedback, and submit pull requests, as we believe in the power of collaboration and open-source development.
 <br>
 A huge thank you to each project member for their dedicated contributions to their respective tasks!
-
+<br>
 Thank you for visiting our repository, and we look forward to hearing from you to make this web application even better!
 </p>
